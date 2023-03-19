@@ -1,5 +1,6 @@
 ﻿using CityAPI.Models;
 using CityAPI.Stores;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
@@ -82,7 +83,7 @@ public class PoiController : ControllerBase
 
         if (city == null) return NotFound();
 
-        var existingPoi = city.POI.FirstOrDefault(p => p.Id == poiId);
+        var existingPoi = FindPoi(city, poiId);
 
         if (existingPoi == null) return NotFound();
 
@@ -92,8 +93,56 @@ public class PoiController : ControllerBase
         return NoContent();
     }
 
+    [HttpPatch("{poiId}")]
+    public ActionResult PartialUpdate(int cityId, int poiId, JsonPatchDocument<PoiUpdateDto> jsonPatchDocument)
+    {
+        var city = FindCity(cityId);
+
+        if (city == null) return NotFound();
+
+        var existingPoi = FindPoi(city, poiId);
+
+        if (existingPoi == null) return NotFound();
+
+        var newPoi = new PoiUpdateDto()
+        {
+            Name = existingPoi.Name,
+            Description = existingPoi.Description
+        };
+
+        jsonPatchDocument.ApplyTo(newPoi, ModelState);
+
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+
+        if (!TryValidateModel(newPoi)) return BadRequest(ModelState);
+
+        existingPoi.Name = newPoi.Name;
+        existingPoi.Description = newPoi.Description;
+
+        return NoContent();
+    }
+
+    [HttpDelete("{poiId}")]
+    public ActionResult DeletePoi(int cityId, int poiId)
+    {
+        var city = FindCity(cityId);
+
+        if (city == null) return NotFound();
+
+        var existingPoi = FindPoi(city, poiId);
+
+        if (existingPoi == null) return NotFound();
+
+        city.POI.Remove(existingPoi);
+
+        return NoContent();
+    }
+
     [NonAction]
     private CityDto? FindCity(int cityId) => cities.FirstOrDefault(c => c.Id == cityId) ?? null;
 
+
+    [NonAction]
+    private static PoiDto? FindPoi(CityDto city, int poiId) => city.POI.FirstOrDefault(p => p.Id == poiId) ?? null;
 
 }
