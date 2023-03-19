@@ -21,7 +21,7 @@ builder.Host.UseSerilog();
 
 builder.Services.AddControllers(options =>
 {
-    options.ReturnHttpNotAcceptable = true;
+    //options.ReturnHttpNotAcceptable = true;
 }).AddXmlDataContractSerializerFormatters();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

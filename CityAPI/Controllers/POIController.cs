@@ -9,6 +9,7 @@ namespace CityAPI.Controllers;
 [Route("api/cities/{cityId}/pois")]
 public class PoiController : ControllerBase
 {
+    private readonly List<CityDto> cities = CityDataStore.Current.Cities;
     private readonly ILogger<PoiController> _logger;
     public PoiController(ILogger<PoiController> logger)
     {
@@ -18,7 +19,7 @@ public class PoiController : ControllerBase
     [HttpGet]
     public ActionResult<IEnumerable<PoiDto>> GetPoIs(int cityId)
     {
-        var city = CityDataStore.Current.Cities.FirstOrDefault(city => city.Id == cityId);
+        var city = FindCity(cityId);
 
         _logger.LogInformation($"city {cityId}");
 
@@ -30,7 +31,7 @@ public class PoiController : ControllerBase
     {
         try
         {
-            var city = CityDataStore.Current.Cities.FirstOrDefault(city => city.Id == cityId);
+            var city = FindCity(cityId);
 
             if (city != null)
             {
@@ -52,12 +53,11 @@ public class PoiController : ControllerBase
     [HttpPost]
     public ActionResult<PoiDto> CreateCity(int cityId, [FromBody] PoiCreateDto modelDto)
     {
-        var cities = CityDataStore.Current.Cities;
-        var city = cities.FirstOrDefault(c => c.Id == cityId);
+        var city = FindCity(cityId);
 
         if (city == null) return NotFound();
 
-        var lastPoiId = cities.MaxBy(c => c.Id)!.Id;
+        var lastPoiId = cities.Max(c => c.Id);
 
         var newPoi = new PoiDto()
         {
@@ -74,4 +74,26 @@ public class PoiController : ControllerBase
             poiId = newPoi.Id
         }, newPoi);
     }
+
+    [HttpPut("{poiId}")]
+    public ActionResult UpdatePoi(int cityId, int poiId, PoiUpdateDto poiUpdateDto)
+    {
+        var city = FindCity(cityId);
+
+        if (city == null) return NotFound();
+
+        var existingPoi = city.POI.FirstOrDefault(p => p.Id == poiId);
+
+        if (existingPoi == null) return NotFound();
+
+        existingPoi.Name = poiUpdateDto.Name;
+        existingPoi.Description = poiUpdateDto.Description;
+
+        return NoContent();
+    }
+
+    [NonAction]
+    private CityDto? FindCity(int cityId) => cities.FirstOrDefault(c => c.Id == cityId) ?? null;
+
+
 }

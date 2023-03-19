@@ -374,3 +374,189 @@ System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport
 2023-03-19 17:57:48.852 +11:00 [INF] Executed action CityAPI.Controllers.CitiesController.GetCities (CityAPI) in 21544.2975ms
 2023-03-19 17:57:48.855 +11:00 [INF] Executed endpoint 'CityAPI.Controllers.CitiesController.GetCities (CityAPI)'
 2023-03-19 17:57:48.856 +11:00 [INF] Request finished HTTP/2 GET https://localhost:7154/api/cities - - - 406 0 - 21615.8802ms
+2023-03-19 23:48:35.376 +11:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-03-19 23:48:37.934 +11:00 [DBG] Hosting starting
+2023-03-19 23:48:38.417 +11:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 73F50881B500133505249616A12751DC097111F2)
+2023-03-19 23:48:38.563 +11:00 [INF] Now listening on: https://localhost:7154
+2023-03-19 23:48:38.563 +11:00 [INF] Now listening on: http://localhost:5170
+2023-03-19 23:48:38.563 +11:00 [DBG] Loaded hosting startup assembly CityAPI
+2023-03-19 23:48:38.564 +11:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-19 23:48:38.564 +11:00 [INF] Hosting environment: Development
+2023-03-19 23:48:38.564 +11:00 [INF] Content root path: /Users/kashif.akram/Projects/CityAPI/CityAPI/
+2023-03-19 23:48:38.564 +11:00 [DBG] Hosting started
+2023-03-19 23:48:38.579 +11:00 [DBG] Connection id "0HMP8F11DHVB3" accepted.
+2023-03-19 23:48:38.581 +11:00 [DBG] Connection id "0HMP8F11DHVB3" started.
+2023-03-19 23:48:39.471 +11:00 [DBG] Connection id "0HMP8F11DHVB3" received FIN.
+2023-03-19 23:48:39.483 +11:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|189_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-03-19 23:48:39.596 +11:00 [DBG] Connection id "0HMP8F11DHVB3" stopped.
+2023-03-19 23:48:39.601 +11:00 [DBG] Connection id "0HMP8F11DHVB3" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-03-19 23:48:39.788 +11:00 [DBG] Connection id "0HMP8F11DHVB4" accepted.
+2023-03-19 23:48:39.789 +11:00 [DBG] Connection id "0HMP8F11DHVB4" started.
+2023-03-19 23:48:39.842 +11:00 [DBG] Connection 0HMP8F11DHVB4 established using the following protocol: "Tls12"
+2023-03-19 23:48:39.905 +11:00 [INF] Request starting HTTP/1.1 GET https://localhost:7154/swagger - -
+2023-03-19 23:48:39.906 +11:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-03-19 23:48:39.933 +11:00 [DBG] No candidates found for the request path '/swagger'
+2023-03-19 23:48:39.933 +11:00 [DBG] Request did not match any endpoints
+2023-03-19 23:48:40.008 +11:00 [DBG] Connection id "0HMP8F11DHVB4" completed keep alive response.
+2023-03-19 23:48:40.011 +11:00 [INF] Request finished HTTP/1.1 GET https://localhost:7154/swagger - - - 301 0 - 109.5003ms
+2023-03-19 23:48:40.078 +11:00 [INF] Request starting HTTP/1.1 GET https://localhost:7154/swagger/index.html - -
+2023-03-19 23:48:40.078 +11:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-03-19 23:48:40.078 +11:00 [DBG] Request did not match any endpoints
+2023-03-19 23:48:40.156 +11:00 [DBG] Connection id "0HMP8F11DHVB4" completed keep alive response.
+2023-03-19 23:48:40.156 +11:00 [INF] Request finished HTTP/1.1 GET https://localhost:7154/swagger/index.html - - - 200 - text/html;charset=utf-8 78.2612ms
+2023-03-19 23:48:40.278 +11:00 [INF] Request starting HTTP/1.1 GET https://localhost:7154/swagger/swagger-ui.css - -
+2023-03-19 23:48:40.278 +11:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-03-19 23:48:40.278 +11:00 [DBG] Request did not match any endpoints
+2023-03-19 23:48:40.290 +11:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-03-19 23:48:40.290 +11:00 [DBG] Connection id "0HMP8F11DHVB4" completed keep alive response.
+2023-03-19 23:48:40.290 +11:00 [INF] Request finished HTTP/1.1 GET https://localhost:7154/swagger/swagger-ui.css - - - 200 143632 text/css 12.2493ms
+2023-03-19 23:48:40.355 +11:00 [INF] Request starting HTTP/1.1 GET https://localhost:7154/swagger/swagger-ui-bundle.js - -
+2023-03-19 23:48:40.355 +11:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2023-03-19 23:48:40.355 +11:00 [DBG] Request did not match any endpoints
+2023-03-19 23:48:40.390 +11:00 [DBG] Connection id "0HMP8F11DHVB5" accepted.
+2023-03-19 23:48:40.391 +11:00 [DBG] Connection id "0HMP8F11DHVB5" started.
+2023-03-19 23:48:40.461 +11:00 [DBG] Connection 0HMP8F11DHVB5 established using the following protocol: "Tls12"
+2023-03-19 23:48:40.510 +11:00 [INF] Request starting HTTP/1.1 GET https://localhost:7154/swagger/swagger-ui-standalone-preset.js - -
+2023-03-19 23:48:40.511 +11:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2023-03-19 23:48:40.511 +11:00 [DBG] Request did not match any endpoints
+2023-03-19 23:48:40.537 +11:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-03-19 23:48:40.541 +11:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-03-19 23:48:40.544 +11:00 [DBG] Connection id "0HMP8F11DHVB5" completed keep alive response.
+2023-03-19 23:48:40.544 +11:00 [DBG] Connection id "0HMP8F11DHVB4" completed keep alive response.
+2023-03-19 23:48:40.544 +11:00 [INF] Request finished HTTP/1.1 GET https://localhost:7154/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 33.8560ms
+2023-03-19 23:48:40.544 +11:00 [INF] Request finished HTTP/1.1 GET https://localhost:7154/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 189.6274ms
+2023-03-19 23:48:42.327 +11:00 [INF] Request starting HTTP/1.1 GET https://localhost:7154/swagger/favicon-32x32.png - -
+2023-03-19 23:48:42.328 +11:00 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2023-03-19 23:48:42.328 +11:00 [DBG] Request did not match any endpoints
+2023-03-19 23:48:42.328 +11:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-03-19 23:48:42.328 +11:00 [DBG] Connection id "0HMP8F11DHVB4" completed keep alive response.
+2023-03-19 23:48:42.328 +11:00 [INF] Request finished HTTP/1.1 GET https://localhost:7154/swagger/favicon-32x32.png - - - 200 628 image/png 0.6394ms
+2023-03-19 23:48:42.425 +11:00 [INF] Request starting HTTP/1.1 GET https://localhost:7154/swagger/v1/swagger.json - -
+2023-03-19 23:48:42.425 +11:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-03-19 23:48:42.425 +11:00 [DBG] Request did not match any endpoints
+2023-03-19 23:48:42.641 +11:00 [DBG] Connection id "0HMP8F11DHVB4" completed keep alive response.
+2023-03-19 23:48:42.642 +11:00 [INF] Request finished HTTP/1.1 GET https://localhost:7154/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 216.8237ms
+2023-03-19 23:48:48.496 +11:00 [INF] Request starting HTTP/1.1 GET https://localhost:7154/api/cities - -
+2023-03-19 23:48:48.503 +11:00 [DBG] 1 candidate(s) found for the request path '/api/cities'
+2023-03-19 23:48:48.508 +11:00 [DBG] Endpoint 'CityAPI.Controllers.CitiesController.GetCities (CityAPI)' with route pattern 'api/cities' is valid for the request path '/api/cities'
+2023-03-19 23:48:48.508 +11:00 [DBG] Request matched endpoint 'CityAPI.Controllers.CitiesController.GetCities (CityAPI)'
+2023-03-19 23:48:48.509 +11:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2023-03-19 23:48:48.512 +11:00 [INF] Executing endpoint 'CityAPI.Controllers.CitiesController.GetCities (CityAPI)'
+2023-03-19 23:48:48.524 +11:00 [INF] Route matched with {action = "GetCities", controller = "Cities"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CityAPI.Models.CityDto]] GetCities() on controller CityAPI.Controllers.CitiesController (CityAPI).
+2023-03-19 23:48:48.525 +11:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-03-19 23:48:48.525 +11:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-03-19 23:48:48.526 +11:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-03-19 23:48:48.526 +11:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-03-19 23:48:48.526 +11:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-03-19 23:48:48.527 +11:00 [DBG] Executing controller factory for controller CityAPI.Controllers.CitiesController (CityAPI)
+2023-03-19 23:48:48.527 +11:00 [DBG] Executed controller factory for controller CityAPI.Controllers.CitiesController (CityAPI)
+2023-03-19 23:48:48.530 +11:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2023-03-19 23:48:48.534 +11:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2023-03-19 23:48:48.534 +11:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2023-03-19 23:48:48.535 +11:00 [WRN] No output formatter was found for content types '["text/plain"]' to write the response.
+2023-03-19 23:48:48.541 +11:00 [INF] Executed action CityAPI.Controllers.CitiesController.GetCities (CityAPI) in 8.949ms
+2023-03-19 23:48:48.542 +11:00 [INF] Executed endpoint 'CityAPI.Controllers.CitiesController.GetCities (CityAPI)'
+2023-03-19 23:48:48.542 +11:00 [DBG] Connection id "0HMP8F11DHVB4" completed keep alive response.
+2023-03-19 23:48:48.542 +11:00 [INF] Request finished HTTP/1.1 GET https://localhost:7154/api/cities - - - 406 0 - 46.4197ms
+2023-03-19 23:50:35.609 +11:00 [DBG] Connection id "0HMP8F11DHVB5" received FIN.
+2023-03-19 23:50:35.705 +11:00 [DBG] Connection id "0HMP8F11DHVB5" sending FIN because: "The client closed the connection."
+2023-03-19 23:50:35.705 +11:00 [DBG] Connection id "0HMP8F11DHVB5" disconnecting.
+2023-03-19 23:50:35.707 +11:00 [DBG] Connection id "0HMP8F11DHVB5" stopped.
+2023-03-19 23:50:43.579 +11:00 [DBG] Connection id "0HMP8F11DHVB4" received FIN.
+2023-03-19 23:50:43.579 +11:00 [DBG] Connection id "0HMP8F11DHVB4" disconnecting.
+2023-03-19 23:50:43.580 +11:00 [DBG] Connection id "0HMP8F11DHVB4" sending FIN because: "The client closed the connection."
+2023-03-19 23:50:43.581 +11:00 [DBG] Connection id "0HMP8F11DHVB4" stopped.
+2023-03-19 23:52:40.122 +11:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-03-19 23:52:40.394 +11:00 [DBG] Hosting starting
+2023-03-19 23:52:40.719 +11:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 73F50881B500133505249616A12751DC097111F2)
+2023-03-19 23:52:40.834 +11:00 [INF] Now listening on: https://localhost:7154
+2023-03-19 23:52:40.834 +11:00 [INF] Now listening on: http://localhost:5170
+2023-03-19 23:52:40.834 +11:00 [DBG] Loaded hosting startup assembly CityAPI
+2023-03-19 23:52:40.834 +11:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-03-19 23:52:40.835 +11:00 [INF] Hosting environment: Development
+2023-03-19 23:52:40.835 +11:00 [INF] Content root path: /Users/kashif.akram/Projects/CityAPI/CityAPI/
+2023-03-19 23:52:40.835 +11:00 [DBG] Hosting started
+2023-03-19 23:52:40.850 +11:00 [DBG] Connection id "0HMP8F39K0RP1" accepted.
+2023-03-19 23:52:40.853 +11:00 [DBG] Connection id "0HMP8F39K0RP1" started.
+2023-03-19 23:52:41.789 +11:00 [DBG] Connection id "0HMP8F39K0RP1" received FIN.
+2023-03-19 23:52:41.798 +11:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|189_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-03-19 23:52:41.877 +11:00 [DBG] Connection id "0HMP8F39K0RP1" stopped.
+2023-03-19 23:52:41.881 +11:00 [DBG] Connection id "0HMP8F39K0RP1" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-03-19 23:52:42.042 +11:00 [DBG] Connection id "0HMP8F39K0RP2" accepted.
+2023-03-19 23:52:42.042 +11:00 [DBG] Connection id "0HMP8F39K0RP2" started.
+2023-03-19 23:52:42.121 +11:00 [DBG] Connection 0HMP8F39K0RP2 established using the following protocol: "Tls12"
+2023-03-19 23:52:42.198 +11:00 [INF] Request starting HTTP/1.1 GET https://localhost:7154/swagger/index.html - -
+2023-03-19 23:52:42.200 +11:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-03-19 23:52:42.231 +11:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-03-19 23:52:42.231 +11:00 [DBG] Request did not match any endpoints
+2023-03-19 23:52:42.418 +11:00 [DBG] Connection id "0HMP8F39K0RP2" completed keep alive response.
+2023-03-19 23:52:42.422 +11:00 [INF] Request finished HTTP/1.1 GET https://localhost:7154/swagger/index.html - - - 200 - text/html;charset=utf-8 229.5864ms
+2023-03-19 23:52:42.527 +11:00 [DBG] Connection id "0HMP8F39K0RP2" received FIN.
+2023-03-19 23:52:42.528 +11:00 [DBG] Connection id "0HMP8F39K0RP2" sending FIN because: "The client closed the connection."
+2023-03-19 23:52:42.529 +11:00 [DBG] Connection id "0HMP8F39K0RP2" disconnecting.
+2023-03-19 23:52:42.532 +11:00 [INF] Request starting HTTP/1.1 GET https://localhost:7154/swagger/swagger-ui.css - -
+2023-03-19 23:52:42.532 +11:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-03-19 23:52:42.532 +11:00 [DBG] Request did not match any endpoints
+2023-03-19 23:52:42.540 +11:00 [DBG] The file transmission was cancelled
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.SendAsync()
+2023-03-19 23:52:42.547 +11:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-03-19 23:52:42.547 +11:00 [INF] Request finished HTTP/1.1 GET https://localhost:7154/swagger/swagger-ui.css - - - 0 143632 text/css 14.9556ms
+2023-03-19 23:52:42.554 +11:00 [DBG] Connection id "0HMP8F39K0RP2" stopped.
+2023-03-19 23:52:42.730 +11:00 [DBG] Connection id "0HMP8F39K0RP3" accepted.
+2023-03-19 23:52:42.730 +11:00 [DBG] Connection id "0HMP8F39K0RP3" started.
+2023-03-19 23:52:42.744 +11:00 [DBG] Connection id "0HMP8F39K0RP3" received FIN.
+2023-03-19 23:52:42.794 +11:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|189_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-03-19 23:52:42.814 +11:00 [DBG] Connection id "0HMP8F39K0RP4" accepted.
+2023-03-19 23:52:42.814 +11:00 [DBG] Connection id "0HMP8F39K0RP3" stopped.
+2023-03-19 23:52:42.814 +11:00 [DBG] Connection id "0HMP8F39K0RP4" started.
+2023-03-19 23:52:42.835 +11:00 [DBG] Connection id "0HMP8F39K0RP3" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-03-19 23:52:42.856 +11:00 [DBG] Connection 0HMP8F39K0RP4 established using the following protocol: "Tls12"
+2023-03-19 23:52:42.881 +11:00 [INF] Request starting HTTP/1.1 GET https://localhost:7154/swagger/v1/swagger.json - -
+2023-03-19 23:52:42.881 +11:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-03-19 23:52:42.881 +11:00 [DBG] Request did not match any endpoints
+2023-03-19 23:52:43.042 +11:00 [DBG] Connection id "0HMP8F39K0RP4" completed keep alive response.
+2023-03-19 23:52:43.042 +11:00 [INF] Request finished HTTP/1.1 GET https://localhost:7154/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 160.7242ms
+2023-03-19 23:52:49.272 +11:00 [INF] Request starting HTTP/1.1 GET https://localhost:7154/api/cities - -
+2023-03-19 23:52:49.280 +11:00 [DBG] 1 candidate(s) found for the request path '/api/cities'
+2023-03-19 23:52:49.284 +11:00 [DBG] Endpoint 'CityAPI.Controllers.CitiesController.GetCities (CityAPI)' with route pattern 'api/cities' is valid for the request path '/api/cities'
+2023-03-19 23:52:49.284 +11:00 [DBG] Request matched endpoint 'CityAPI.Controllers.CitiesController.GetCities (CityAPI)'
+2023-03-19 23:52:49.285 +11:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2023-03-19 23:52:49.287 +11:00 [INF] Executing endpoint 'CityAPI.Controllers.CitiesController.GetCities (CityAPI)'
+2023-03-19 23:52:49.296 +11:00 [INF] Route matched with {action = "GetCities", controller = "Cities"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CityAPI.Models.CityDto]] GetCities() on controller CityAPI.Controllers.CitiesController (CityAPI).
+2023-03-19 23:52:49.297 +11:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-03-19 23:52:49.297 +11:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-03-19 23:52:49.298 +11:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-03-19 23:52:49.298 +11:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-03-19 23:52:49.298 +11:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-03-19 23:52:49.299 +11:00 [DBG] Executing controller factory for controller CityAPI.Controllers.CitiesController (CityAPI)
+2023-03-19 23:52:49.299 +11:00 [DBG] Executed controller factory for controller CityAPI.Controllers.CitiesController (CityAPI)
+2023-03-19 23:52:49.303 +11:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter"]
+2023-03-19 23:52:49.307 +11:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2023-03-19 23:52:49.308 +11:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2023-03-19 23:52:49.308 +11:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-03-19 23:52:49.308 +11:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-03-19 23:52:49.309 +11:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-03-19 23:52:49.309 +11:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[CityAPI.Models.CityDto, CityAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-03-19 23:52:49.324 +11:00 [INF] Executed action CityAPI.Controllers.CitiesController.GetCities (CityAPI) in 17.5334ms
+2023-03-19 23:52:49.325 +11:00 [INF] Executed endpoint 'CityAPI.Controllers.CitiesController.GetCities (CityAPI)'
+2023-03-19 23:52:49.325 +11:00 [DBG] Connection id "0HMP8F39K0RP4" completed keep alive response.
+2023-03-19 23:52:49.326 +11:00 [INF] Request finished HTTP/1.1 GET https://localhost:7154/api/cities - - - 200 - application/json;+charset=utf-8 53.7061ms
