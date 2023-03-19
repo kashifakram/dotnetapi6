@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CityAPI.Models;
+using CityAPI.Stores;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CityAPI.Controllers;
 
@@ -19,4 +21,6 @@ public class CitiesController : ControllerBase
 
         return city == null ? NotFound() : Ok(city);
     }
+
+
 }

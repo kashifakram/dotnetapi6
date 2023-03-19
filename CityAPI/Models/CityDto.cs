@@ -1,4 +1,4 @@
-﻿namespace CityAPI;
+﻿namespace CityAPI.Models;
 
 public class CityDto
 {
@@ -8,8 +8,7 @@ public class CityDto
 
     public string? Description { get; set; }
 
-    public int TotalPOIs => POI.Count;
+    public int TotalPoIs => POI.Count;
 
-    public ICollection<POIDto> POI { get; set; } = new List<POIDto>();
+    public ICollection<PoiDto> POI { get; set; } = new List<PoiDto>();
 }   
-
