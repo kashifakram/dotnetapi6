@@ -9,7 +9,7 @@ namespace CityAPI.Services
         public CloudMailService(IConfiguration configuration)
         {
             _mailTo = configuration["mailSettings:mailToAddress"];
-            _mailFrom = configuration["mailSettings:mailToAddress"];
+            _mailFrom = configuration["mailSettings:mailFromAddress"];
         }
 
         public void SendMail(string subject, string message)
