@@ -1,4 +1,5 @@
 ﻿using CityAPI.Models;
+using CityAPI.Services;
 using CityAPI.Stores;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -10,11 +11,18 @@ namespace CityAPI.Controllers;
 [Route("api/cities/{cityId}/pois")]
 public class PoiController : ControllerBase
 {
-    private readonly List<CityDto> cities = CityDataStore.Current.Cities;
     private readonly ILogger<PoiController> _logger;
-    public PoiController(ILogger<PoiController> logger)
+    private readonly IMailService _localMailService;
+    private readonly CityDataStore _cityDataStore;
+
+    private readonly List<CityDto> cities;
+
+    public PoiController(ILogger<PoiController> logger, IMailService localMailService, CityDataStore cityDataStore)
     {
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+        _localMailService = localMailService ?? throw new ArgumentNullException(nameof(localMailService));
+        _cityDataStore = cityDataStore ?? throw new ArgumentNullException(nameof(cityDataStore));
+        cities = _cityDataStore.Cities;
     }
 
     [HttpGet]
@@ -134,6 +142,8 @@ public class PoiController : ControllerBase
         if (existingPoi == null) return NotFound();
 
         city.POI.Remove(existingPoi);
+
+        _localMailService.SendMail($"POI {poiId} has been deleted", $"POI {poiId} has been deleted from {cityId}");
 
         return NoContent();
     }
