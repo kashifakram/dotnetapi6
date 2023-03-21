@@ -1,4 +1,6 @@
-﻿namespace CityAPI.Models;
+﻿using CityAPI.Models;
+
+namespace CityAPI.Models;
 
 public class CityDto
 {
