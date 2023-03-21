@@ -41,7 +41,7 @@ builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
 #endif
 
 builder.Services.AddSingleton<CityDataStore>();
-builder.Services.AddDbContext<CityContext>(ops => ops.UseSqlite("Data Source=CityInfo.sqlite"));
+builder.Services.AddDbContext<CityContext>(ops => ops.UseSqlite(builder.Configuration["connectionStrings:citycc"]));
 
 
 var app = builder.Build();

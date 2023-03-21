@@ -2,6 +2,7 @@
 using CityAPI.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CityAPI.Migrations
 {
     [DbContext(typeof(CityContext))]
-    partial class CityContextModelSnapshot : ModelSnapshot
+    [Migration("20230321041536_initial")]
+    partial class initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.0");
@@ -34,26 +36,6 @@ namespace CityAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Cities");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "Manchester of Pakistan",
-                            Name = "Faisalabad"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "Second biggest city of Pakistan",
-                            Name = "Lahore"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "Biggest city of Pakistan",
-                            Name = "Karachi"
-                        });
                 });
 
             modelBuilder.Entity("CityAPI.Entities.Poi", b =>
@@ -65,10 +47,6 @@ namespace CityAPI.Migrations
                     b.Property<int>("CityId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Description")
-                        .HasMaxLength(200)
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -79,22 +57,6 @@ namespace CityAPI.Migrations
                     b.HasIndex("CityId");
 
                     b.ToTable("Pois");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CityId = 1,
-                            Description = "Center of the city connecting 8 major centers",
-                            Name = "Clock Tower"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CityId = 1,
-                            Description = "Canal road's oldest subrub",
-                            Name = "Madina Town"
-                        });
                 });
 
             modelBuilder.Entity("CityAPI.Entities.Poi", b =>
