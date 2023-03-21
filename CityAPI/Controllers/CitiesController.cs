@@ -40,30 +40,41 @@ public class CitiesController : ControllerBase
         var iswith = Request.Query["needpoi"].ToString();
 
         var city = await _cityRepo.GetAsyncCity(id, false);
-        if (city == null) return NotFound();
+        var pois = await _cityRepo.GetAsyncPois(id);
 
-        var result = new CityDto
-        {
-            Id = city.Id,
-            Name = city.Name,
-            Description = city.Description
-        };
+        if (city == null) return NotFound();
 
         if (!string.IsNullOrEmpty(iswith))
         {
-            foreach (var poi in city.POI)
+            var result = new CityDto
             {
-                result.POI.Add(new PoiDto
+                Id = city.Id,
+                Name = city.Name,
+                Description = city.Description
+            };
+            if (pois.Any())
+                foreach (var poi in pois)
                 {
-                    Id = poi.Id,
-                    Name = poi.Name,
-                    Description = poi.Description
-                });
-            }
-
+                    result.POI.Add(new PoiDto
+                    {
+                        Id = poi.Id,
+                        Name = poi.Name,
+                        Description = poi.Description
+                    });
+                }
+            return Ok(result);
         }
 
-        return Ok(result);
+        else
+        {
+            var result = new CityWithoutPioDto
+            {
+                Id = city.Id,
+                Name = city.Name,
+                Description = city.Description
+            };
 
+            return Ok(result);
+        }
     }
 }
