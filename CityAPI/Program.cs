@@ -34,14 +34,16 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
 
+builder.Services.AddSingleton<CityDataStore>();
+builder.Services.AddDbContext<CityContext>(ops => ops.UseSqlite(builder.Configuration["connectionStrings:citycc"]));
+
+builder.Services.AddScoped<ICityRepo, CityRepo>();
+
 #if DEBUG
     builder.Services.AddTransient<IMailService, LocalMailService>();
 #else
-    builder.Services.AddTransient<IMailService, CloudMailService>();
+builder.Services.AddTransient<IMailService, CloudMailService>();
 #endif
-
-builder.Services.AddSingleton<CityDataStore>();
-builder.Services.AddDbContext<CityContext>(ops => ops.UseSqlite(builder.Configuration["connectionStrings:citycc"]));
 
 
 var app = builder.Build();
