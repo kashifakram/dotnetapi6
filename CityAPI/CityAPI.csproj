@@ -23,11 +23,13 @@
     <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="7.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.15" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Services\" />
     <None Remove="DbContexts\" />
+    <None Remove="AutoMapperProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Week02- Tute.pdf">
@@ -37,5 +39,6 @@
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="DbContexts\" />
+    <Folder Include="AutoMapperProfiles\" />
   </ItemGroup>
 </Project>

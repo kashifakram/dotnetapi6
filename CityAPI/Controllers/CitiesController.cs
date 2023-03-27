@@ -1,4 +1,5 @@
-﻿using CityAPI.Models;
+﻿using AutoMapper;
+using CityAPI.Models;
 using CityAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,10 +9,12 @@ namespace CityAPI.Controllers;
 [Route("api/cities")]
 public class CitiesController : ControllerBase
 {
-    private readonly ICityRepo _cityRepo; 
+    private readonly ICityRepo _cityRepo;
+    private readonly IMapper _mapper;
 
-    public CitiesController(ICityRepo cityRepo)
+    public CitiesController(ICityRepo cityRepo, IMapper mapper)
     {
+        _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         _cityRepo = cityRepo ?? throw new ArgumentNullException(nameof(cityRepo));
     }
 
@@ -64,7 +67,6 @@ public class CitiesController : ControllerBase
                 }
             return Ok(result);
         }
-
         else
         {
             var result = new CityWithoutPioDto
