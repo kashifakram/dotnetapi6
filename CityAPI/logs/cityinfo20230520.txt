@@ -1,0 +1,519 @@
+2023-05-20 18:03:50.591 +10:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-05-20 18:03:50.701 +10:00 [DBG] Hosting starting
+2023-05-20 18:03:50.817 +10:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 2A57B1E68B58CE4FB973E6C0E9A6B0BB031D7804)
+2023-05-20 18:03:50.879 +10:00 [INF] Now listening on: https://localhost:7154
+2023-05-20 18:03:50.882 +10:00 [INF] Now listening on: http://localhost:5170
+2023-05-20 18:03:50.883 +10:00 [DBG] Loaded hosting startup assembly CityAPI
+2023-05-20 18:03:50.884 +10:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-05-20 18:03:50.884 +10:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-05-20 18:03:50.886 +10:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-20 18:03:50.886 +10:00 [INF] Hosting environment: Production
+2023-05-20 18:03:50.887 +10:00 [INF] Content root path: C:\Users\kashif.akram\Projects\dotnetapi6\CityAPI\
+2023-05-20 18:03:50.889 +10:00 [DBG] Hosting started
+2023-05-20 18:03:51.269 +10:00 [DBG] Connection id "0HMQP12VQ28IS" accepted.
+2023-05-20 18:03:51.269 +10:00 [DBG] Connection id "0HMQP12VQ28IR" accepted.
+2023-05-20 18:03:51.271 +10:00 [DBG] Connection id "0HMQP12VQ28IS" started.
+2023-05-20 18:03:51.271 +10:00 [DBG] Connection id "0HMQP12VQ28IR" started.
+2023-05-20 18:03:51.280 +10:00 [DBG] Connection id "0HMQP12VQ28IS" received FIN.
+2023-05-20 18:03:51.280 +10:00 [DBG] Connection id "0HMQP12VQ28IR" received FIN.
+2023-05-20 18:03:51.286 +10:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-05-20 18:03:51.288 +10:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|189_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-05-20 18:03:51.313 +10:00 [DBG] Connection id "0HMQP12VQ28IS" stopped.
+2023-05-20 18:03:51.313 +10:00 [DBG] Connection id "0HMQP12VQ28IR" stopped.
+2023-05-20 18:03:51.316 +10:00 [DBG] Connection id "0HMQP12VQ28IR" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-05-20 18:03:51.316 +10:00 [DBG] Connection id "0HMQP12VQ28IS" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-05-20 18:03:51.915 +10:00 [DBG] Connection id "0HMQP12VQ28IT" accepted.
+2023-05-20 18:03:51.917 +10:00 [DBG] Connection id "0HMQP12VQ28IT" started.
+2023-05-20 18:03:51.969 +10:00 [DBG] Connection 0HMQP12VQ28IT established using the following protocol: "Tls13"
+2023-05-20 18:03:52.013 +10:00 [INF] Request starting HTTP/2 GET https://localhost:7154/swagger - -
+2023-05-20 18:03:52.146 +10:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-05-20 18:03:52.176 +10:00 [DBG] No candidates found for the request path '/swagger'
+2023-05-20 18:03:52.177 +10:00 [DBG] Request did not match any endpoints
+2023-05-20 18:03:52.189 +10:00 [INF] Request finished HTTP/2 GET https://localhost:7154/swagger - - - 404 0 - 179.5969ms
+2023-05-20 18:04:37.600 +10:00 [DBG] Connection id "0HMQP12VQ28IU" accepted.
+2023-05-20 18:04:37.604 +10:00 [DBG] Connection id "0HMQP12VQ28IU" received FIN.
+2023-05-20 18:04:37.606 +10:00 [DBG] Connection id "0HMQP12VQ28IV" accepted.
+2023-05-20 18:04:37.606 +10:00 [DBG] Connection id "0HMQP12VQ28IU" started.
+2023-05-20 18:04:37.608 +10:00 [DBG] Connection id "0HMQP12VQ28IV" started.
+2023-05-20 18:04:37.610 +10:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-05-20 18:04:37.616 +10:00 [DBG] Connection id "0HMQP12VQ28IU" stopped.
+2023-05-20 18:04:37.618 +10:00 [DBG] Connection id "0HMQP12VQ28IU" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-05-20 18:04:37.619 +10:00 [DBG] Connection 0HMQP12VQ28IV established using the following protocol: "Tls13"
+2023-05-20 18:04:37.625 +10:00 [INF] Request starting HTTP/1.1 POST https://localhost:7154/api/authentication/authenticate application/json 93
+2023-05-20 18:04:37.631 +10:00 [DBG] 1 candidate(s) found for the request path '/api/authentication/authenticate'
+2023-05-20 18:04:37.635 +10:00 [DBG] Endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)' with route pattern 'api/authentication/authenticate' is valid for the request path '/api/authentication/authenticate'
+2023-05-20 18:04:37.638 +10:00 [DBG] Request matched endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:04:37.640 +10:00 [INF] Executing endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:04:37.670 +10:00 [INF] Route matched with {action = "Authenticate", controller = "Authentication"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Authenticate(AuthenticationRequestBody) on controller CityAPI.Controllers.AuthenticationController (CityAPI).
+2023-05-20 18:04:37.675 +10:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-05-20 18:04:37.676 +10:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-05-20 18:04:37.677 +10:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-05-20 18:04:37.678 +10:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-05-20 18:04:37.679 +10:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-05-20 18:04:37.681 +10:00 [DBG] Executing controller factory for controller CityAPI.Controllers.AuthenticationController (CityAPI)
+2023-05-20 18:04:37.683 +10:00 [DBG] Executed controller factory for controller CityAPI.Controllers.AuthenticationController (CityAPI)
+2023-05-20 18:04:37.687 +10:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-05-20 18:04:37.691 +10:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' using the name '' in request data ...
+2023-05-20 18:04:37.694 +10:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerInputFormatter' for content type 'application/json'.
+2023-05-20 18:04:37.695 +10:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'.
+2023-05-20 18:04:37.696 +10:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'.
+2023-05-20 18:04:37.701 +10:00 [DBG] Connection id "0HMQP12VQ28IV", Request id "0HMQP12VQ28IV:00000002": started reading request body.
+2023-05-20 18:04:37.703 +10:00 [DBG] Connection id "0HMQP12VQ28IV", Request id "0HMQP12VQ28IV:00000002": done reading request body.
+2023-05-20 18:04:37.815 +10:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:04:37.818 +10:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:04:37.821 +10:00 [DBG] Attempting to validate the bound parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-05-20 18:04:37.830 +10:00 [DBG] Done attempting to validate the bound parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:04:37.850 +10:00 [INF] Executed action CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI) in 166.8114ms
+2023-05-20 18:04:37.853 +10:00 [INF] Executed endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:04:37.856 +10:00 [ERR] Connection id "0HMQP12VQ28IV", Request id "0HMQP12VQ28IV:00000002": An unhandled exception was thrown by the application.
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at CityAPI.Controllers.AuthenticationController.Authenticate(AuthenticationRequestBody authenticationRequestBody) in C:\Users\kashif.akram\Projects\dotnetapi6\CityAPI\Controllers\AuthenticationController.cs:line 54
+   at lambda_method1(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-05-20 18:04:37.882 +10:00 [DBG] Connection id "0HMQP12VQ28IV" completed keep alive response.
+2023-05-20 18:04:37.883 +10:00 [INF] Request finished HTTP/1.1 POST https://localhost:7154/api/authentication/authenticate application/json 93 - 500 0 - 258.3195ms
+2023-05-20 18:05:12.137 +10:00 [INF] Request starting HTTP/1.1 POST https://localhost:7154/api/authentication/authenticate application/json 93
+2023-05-20 18:05:12.140 +10:00 [DBG] 1 candidate(s) found for the request path '/api/authentication/authenticate'
+2023-05-20 18:05:12.141 +10:00 [DBG] Endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)' with route pattern 'api/authentication/authenticate' is valid for the request path '/api/authentication/authenticate'
+2023-05-20 18:05:12.142 +10:00 [DBG] Request matched endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:05:12.143 +10:00 [INF] Executing endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:05:12.144 +10:00 [INF] Route matched with {action = "Authenticate", controller = "Authentication"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Authenticate(AuthenticationRequestBody) on controller CityAPI.Controllers.AuthenticationController (CityAPI).
+2023-05-20 18:05:12.145 +10:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-05-20 18:05:12.147 +10:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-05-20 18:05:12.149 +10:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-05-20 18:05:12.150 +10:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-05-20 18:05:12.151 +10:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-05-20 18:05:12.152 +10:00 [DBG] Executing controller factory for controller CityAPI.Controllers.AuthenticationController (CityAPI)
+2023-05-20 18:05:12.153 +10:00 [DBG] Executed controller factory for controller CityAPI.Controllers.AuthenticationController (CityAPI)
+2023-05-20 18:05:12.156 +10:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-05-20 18:05:12.158 +10:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' using the name '' in request data ...
+2023-05-20 18:05:12.159 +10:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerInputFormatter' for content type 'application/json'.
+2023-05-20 18:05:12.160 +10:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'.
+2023-05-20 18:05:12.161 +10:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'.
+2023-05-20 18:05:12.162 +10:00 [DBG] Connection id "0HMQP12VQ28IV", Request id "0HMQP12VQ28IV:00000003": started reading request body.
+2023-05-20 18:05:12.163 +10:00 [DBG] Connection id "0HMQP12VQ28IV", Request id "0HMQP12VQ28IV:00000003": done reading request body.
+2023-05-20 18:05:12.164 +10:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:05:12.165 +10:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:05:12.166 +10:00 [DBG] Attempting to validate the bound parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-05-20 18:05:12.167 +10:00 [DBG] Done attempting to validate the bound parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:05:12.168 +10:00 [INF] Executed action CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI) in 16.2121ms
+2023-05-20 18:05:12.169 +10:00 [INF] Executed endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:05:12.170 +10:00 [ERR] Connection id "0HMQP12VQ28IV", Request id "0HMQP12VQ28IV:00000003": An unhandled exception was thrown by the application.
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at CityAPI.Controllers.AuthenticationController.Authenticate(AuthenticationRequestBody authenticationRequestBody) in C:\Users\kashif.akram\Projects\dotnetapi6\CityAPI\Controllers\AuthenticationController.cs:line 54
+   at lambda_method1(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-05-20 18:05:12.178 +10:00 [DBG] Connection id "0HMQP12VQ28IV" completed keep alive response.
+2023-05-20 18:05:12.181 +10:00 [INF] Request finished HTTP/1.1 POST https://localhost:7154/api/authentication/authenticate application/json 93 - 500 0 - 43.1914ms
+2023-05-20 18:05:53.495 +10:00 [INF] Request starting HTTP/1.1 POST https://localhost:7154/api/authentication/authenticate application/json 61
+2023-05-20 18:05:53.497 +10:00 [DBG] 1 candidate(s) found for the request path '/api/authentication/authenticate'
+2023-05-20 18:05:53.499 +10:00 [DBG] Endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)' with route pattern 'api/authentication/authenticate' is valid for the request path '/api/authentication/authenticate'
+2023-05-20 18:05:53.501 +10:00 [DBG] Request matched endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:05:53.502 +10:00 [INF] Executing endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:05:53.504 +10:00 [INF] Route matched with {action = "Authenticate", controller = "Authentication"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Authenticate(AuthenticationRequestBody) on controller CityAPI.Controllers.AuthenticationController (CityAPI).
+2023-05-20 18:05:53.507 +10:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-05-20 18:05:53.509 +10:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-05-20 18:05:53.514 +10:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-05-20 18:05:53.516 +10:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-05-20 18:05:53.517 +10:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-05-20 18:05:53.519 +10:00 [DBG] Executing controller factory for controller CityAPI.Controllers.AuthenticationController (CityAPI)
+2023-05-20 18:05:53.520 +10:00 [DBG] Executed controller factory for controller CityAPI.Controllers.AuthenticationController (CityAPI)
+2023-05-20 18:05:53.521 +10:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-05-20 18:05:53.522 +10:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' using the name '' in request data ...
+2023-05-20 18:05:53.523 +10:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerInputFormatter' for content type 'application/json'.
+2023-05-20 18:05:53.524 +10:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'.
+2023-05-20 18:05:53.525 +10:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'.
+2023-05-20 18:05:53.529 +10:00 [DBG] Connection id "0HMQP12VQ28IV", Request id "0HMQP12VQ28IV:00000004": started reading request body.
+2023-05-20 18:05:53.530 +10:00 [DBG] Connection id "0HMQP12VQ28IV", Request id "0HMQP12VQ28IV:00000004": done reading request body.
+2023-05-20 18:05:53.531 +10:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:05:53.532 +10:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:05:53.532 +10:00 [DBG] Attempting to validate the bound parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-05-20 18:05:53.533 +10:00 [DBG] Done attempting to validate the bound parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:05:53.535 +10:00 [INF] Executed action CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI) in 15.7965ms
+2023-05-20 18:05:53.535 +10:00 [INF] Executed endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:05:53.536 +10:00 [ERR] Connection id "0HMQP12VQ28IV", Request id "0HMQP12VQ28IV:00000004": An unhandled exception was thrown by the application.
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at CityAPI.Controllers.AuthenticationController.Authenticate(AuthenticationRequestBody authenticationRequestBody) in C:\Users\kashif.akram\Projects\dotnetapi6\CityAPI\Controllers\AuthenticationController.cs:line 54
+   at lambda_method1(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-05-20 18:05:53.549 +10:00 [DBG] Connection id "0HMQP12VQ28IV" completed keep alive response.
+2023-05-20 18:05:53.549 +10:00 [INF] Request finished HTTP/1.1 POST https://localhost:7154/api/authentication/authenticate application/json 61 - 500 0 - 54.2452ms
+2023-05-20 18:06:04.247 +10:00 [DBG] Connection id "0HMQP12VQ28IT" is closing.
+2023-05-20 18:06:04.260 +10:00 [DBG] Connection id "0HMQP12VQ28IT" is closed. The last processed stream ID was 1.
+2023-05-20 18:06:04.263 +10:00 [DBG] Connection id "0HMQP12VQ28IT" received FIN.
+2023-05-20 18:06:04.264 +10:00 [DBG] Connection id "0HMQP12VQ28IT" stopped.
+2023-05-20 18:06:04.267 +10:00 [DBG] Connection id "0HMQP12VQ28IT" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-05-20 18:07:10.933 +10:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-05-20 18:07:10.996 +10:00 [DBG] Hosting starting
+2023-05-20 18:07:11.045 +10:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 2A57B1E68B58CE4FB973E6C0E9A6B0BB031D7804)
+2023-05-20 18:07:11.089 +10:00 [INF] Now listening on: https://localhost:7154
+2023-05-20 18:07:11.090 +10:00 [INF] Now listening on: http://localhost:5170
+2023-05-20 18:07:11.091 +10:00 [DBG] Loaded hosting startup assembly CityAPI
+2023-05-20 18:07:11.092 +10:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-05-20 18:07:11.092 +10:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-05-20 18:07:11.093 +10:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-20 18:07:11.094 +10:00 [INF] Hosting environment: Production
+2023-05-20 18:07:11.095 +10:00 [INF] Content root path: C:\Users\kashif.akram\Projects\dotnetapi6\CityAPI\
+2023-05-20 18:07:11.095 +10:00 [DBG] Hosting started
+2023-05-20 18:07:19.092 +10:00 [DBG] Connection id "0HMQP14TO1EKD" received FIN.
+2023-05-20 18:07:19.105 +10:00 [DBG] Connection id "0HMQP14TO1EKD" accepted.
+2023-05-20 18:07:19.109 +10:00 [DBG] Connection id "0HMQP14TO1EKD" started.
+2023-05-20 18:07:19.125 +10:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-05-20 18:07:19.182 +10:00 [DBG] Connection id "0HMQP14TO1EKD" stopped.
+2023-05-20 18:07:19.187 +10:00 [DBG] Connection id "0HMQP14TO1EKD" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-05-20 18:07:19.441 +10:00 [DBG] Connection id "0HMQP14TO1EKE" accepted.
+2023-05-20 18:07:19.478 +10:00 [DBG] Connection id "0HMQP14TO1EKE" started.
+2023-05-20 18:07:19.541 +10:00 [DBG] Connection 0HMQP14TO1EKE established using the following protocol: "Tls13"
+2023-05-20 18:07:19.654 +10:00 [INF] Request starting HTTP/2 GET https://localhost:7154/swagger - -
+2023-05-20 18:07:19.700 +10:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-05-20 18:07:19.748 +10:00 [DBG] No candidates found for the request path '/swagger'
+2023-05-20 18:07:19.754 +10:00 [DBG] Request did not match any endpoints
+2023-05-20 18:07:19.776 +10:00 [INF] Request finished HTTP/2 GET https://localhost:7154/swagger - - - 404 0 - 127.4579ms
+2023-05-20 18:07:26.482 +10:00 [DBG] Connection id "0HMQP14TO1EKF" accepted.
+2023-05-20 18:07:26.484 +10:00 [DBG] Connection id "0HMQP14TO1EKG" accepted.
+2023-05-20 18:07:26.485 +10:00 [DBG] Connection id "0HMQP14TO1EKF" started.
+2023-05-20 18:07:26.486 +10:00 [DBG] Connection id "0HMQP14TO1EKF" received FIN.
+2023-05-20 18:07:26.486 +10:00 [DBG] Connection id "0HMQP14TO1EKG" started.
+2023-05-20 18:07:26.490 +10:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|189_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-05-20 18:07:26.495 +10:00 [DBG] Connection 0HMQP14TO1EKG established using the following protocol: "Tls13"
+2023-05-20 18:07:26.499 +10:00 [DBG] Connection id "0HMQP14TO1EKF" stopped.
+2023-05-20 18:07:26.502 +10:00 [DBG] Connection id "0HMQP14TO1EKF" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-05-20 18:07:26.509 +10:00 [INF] Request starting HTTP/1.1 POST https://localhost:7154/api/authentication/authenticate application/json 61
+2023-05-20 18:07:26.519 +10:00 [DBG] 1 candidate(s) found for the request path '/api/authentication/authenticate'
+2023-05-20 18:07:26.525 +10:00 [DBG] Endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)' with route pattern 'api/authentication/authenticate' is valid for the request path '/api/authentication/authenticate'
+2023-05-20 18:07:26.527 +10:00 [DBG] Request matched endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:07:26.529 +10:00 [INF] Executing endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:07:26.574 +10:00 [INF] Route matched with {action = "Authenticate", controller = "Authentication"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Authenticate(AuthenticationRequestBody) on controller CityAPI.Controllers.AuthenticationController (CityAPI).
+2023-05-20 18:07:26.580 +10:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-05-20 18:07:26.582 +10:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-05-20 18:07:26.585 +10:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-05-20 18:07:26.589 +10:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-05-20 18:07:26.594 +10:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-05-20 18:07:26.598 +10:00 [DBG] Executing controller factory for controller CityAPI.Controllers.AuthenticationController (CityAPI)
+2023-05-20 18:07:26.600 +10:00 [DBG] Executed controller factory for controller CityAPI.Controllers.AuthenticationController (CityAPI)
+2023-05-20 18:07:26.603 +10:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-05-20 18:07:26.605 +10:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' using the name '' in request data ...
+2023-05-20 18:07:26.607 +10:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerInputFormatter' for content type 'application/json'.
+2023-05-20 18:07:26.609 +10:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'.
+2023-05-20 18:07:26.610 +10:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'.
+2023-05-20 18:07:26.617 +10:00 [DBG] Connection id "0HMQP14TO1EKG", Request id "0HMQP14TO1EKG:00000002": started reading request body.
+2023-05-20 18:07:26.618 +10:00 [DBG] Connection id "0HMQP14TO1EKG", Request id "0HMQP14TO1EKG:00000002": done reading request body.
+2023-05-20 18:07:26.790 +10:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:07:26.795 +10:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:07:26.797 +10:00 [DBG] Attempting to validate the bound parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-05-20 18:07:26.805 +10:00 [DBG] Done attempting to validate the bound parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:07:26.833 +10:00 [INF] Executed action CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI) in 224.9484ms
+2023-05-20 18:07:26.837 +10:00 [INF] Executed endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:07:26.839 +10:00 [ERR] Connection id "0HMQP14TO1EKG", Request id "0HMQP14TO1EKG:00000002": An unhandled exception was thrown by the application.
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at CityAPI.Controllers.AuthenticationController.Authenticate(AuthenticationRequestBody authenticationRequestBody) in C:\Users\kashif.akram\Projects\dotnetapi6\CityAPI\Controllers\AuthenticationController.cs:line 54
+   at lambda_method1(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-05-20 18:07:26.892 +10:00 [DBG] Connection id "0HMQP14TO1EKG" completed keep alive response.
+2023-05-20 18:07:26.897 +10:00 [INF] Request finished HTTP/1.1 POST https://localhost:7154/api/authentication/authenticate application/json 61 - 500 0 - 388.2642ms
+2023-05-20 18:07:41.591 +10:00 [INF] Request starting HTTP/1.1 POST https://localhost:7154/api/authentication/authenticate application/json 61
+2023-05-20 18:07:41.595 +10:00 [DBG] 1 candidate(s) found for the request path '/api/authentication/authenticate'
+2023-05-20 18:07:41.597 +10:00 [DBG] Endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)' with route pattern 'api/authentication/authenticate' is valid for the request path '/api/authentication/authenticate'
+2023-05-20 18:07:41.599 +10:00 [DBG] Request matched endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:07:41.600 +10:00 [INF] Executing endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:07:41.601 +10:00 [INF] Route matched with {action = "Authenticate", controller = "Authentication"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Authenticate(AuthenticationRequestBody) on controller CityAPI.Controllers.AuthenticationController (CityAPI).
+2023-05-20 18:07:41.603 +10:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-05-20 18:07:41.605 +10:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-05-20 18:07:41.607 +10:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-05-20 18:07:41.609 +10:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-05-20 18:07:41.614 +10:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-05-20 18:07:41.616 +10:00 [DBG] Executing controller factory for controller CityAPI.Controllers.AuthenticationController (CityAPI)
+2023-05-20 18:07:41.617 +10:00 [DBG] Executed controller factory for controller CityAPI.Controllers.AuthenticationController (CityAPI)
+2023-05-20 18:07:41.620 +10:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-05-20 18:07:41.621 +10:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' using the name '' in request data ...
+2023-05-20 18:07:41.623 +10:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerInputFormatter' for content type 'application/json'.
+2023-05-20 18:07:41.624 +10:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'.
+2023-05-20 18:07:41.628 +10:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'.
+2023-05-20 18:07:41.629 +10:00 [DBG] Connection id "0HMQP14TO1EKG", Request id "0HMQP14TO1EKG:00000003": started reading request body.
+2023-05-20 18:07:41.630 +10:00 [DBG] Connection id "0HMQP14TO1EKG", Request id "0HMQP14TO1EKG:00000003": done reading request body.
+2023-05-20 18:07:41.631 +10:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:07:41.632 +10:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:07:41.633 +10:00 [DBG] Attempting to validate the bound parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-05-20 18:07:41.635 +10:00 [DBG] Done attempting to validate the bound parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:07:41.644 +10:00 [INF] Executed action CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI) in 28.5054ms
+2023-05-20 18:07:41.645 +10:00 [INF] Executed endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:07:41.646 +10:00 [ERR] Connection id "0HMQP14TO1EKG", Request id "0HMQP14TO1EKG:00000003": An unhandled exception was thrown by the application.
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at CityAPI.Controllers.AuthenticationController.Authenticate(AuthenticationRequestBody authenticationRequestBody) in C:\Users\kashif.akram\Projects\dotnetapi6\CityAPI\Controllers\AuthenticationController.cs:line 54
+   at lambda_method1(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-05-20 18:07:41.658 +10:00 [DBG] Connection id "0HMQP14TO1EKG" completed keep alive response.
+2023-05-20 18:07:41.660 +10:00 [INF] Request finished HTTP/1.1 POST https://localhost:7154/api/authentication/authenticate application/json 61 - 500 0 - 69.0538ms
+2023-05-20 18:09:31.406 +10:00 [DBG] Connection id "0HMQP14TO1EKE" is closing.
+2023-05-20 18:09:31.416 +10:00 [DBG] Connection id "0HMQP14TO1EKE" is closed. The last processed stream ID was 1.
+2023-05-20 18:09:31.419 +10:00 [DBG] Connection id "0HMQP14TO1EKE" received FIN.
+2023-05-20 18:09:31.421 +10:00 [DBG] Connection id "0HMQP14TO1EKE" stopped.
+2023-05-20 18:09:31.432 +10:00 [DBG] Connection id "0HMQP14TO1EKE" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-05-20 18:09:52.627 +10:00 [DBG] Connection id "0HMQP14TO1EKG" disconnecting.
+2023-05-20 18:09:52.630 +10:00 [DBG] Connection id "0HMQP14TO1EKG" stopped.
+2023-05-20 18:09:52.632 +10:00 [DBG] Connection id "0HMQP14TO1EKG" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-05-20 18:13:32.462 +10:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-05-20 18:13:32.529 +10:00 [DBG] Hosting starting
+2023-05-20 18:13:32.575 +10:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 2A57B1E68B58CE4FB973E6C0E9A6B0BB031D7804)
+2023-05-20 18:13:32.613 +10:00 [INF] Now listening on: https://localhost:7154
+2023-05-20 18:13:32.614 +10:00 [INF] Now listening on: http://localhost:5170
+2023-05-20 18:13:32.615 +10:00 [DBG] Loaded hosting startup assembly CityAPI
+2023-05-20 18:13:32.616 +10:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-05-20 18:13:32.617 +10:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-05-20 18:13:32.619 +10:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-20 18:13:32.620 +10:00 [INF] Hosting environment: Production
+2023-05-20 18:13:32.621 +10:00 [INF] Content root path: C:\Users\kashif.akram\Projects\dotnetapi6\CityAPI\
+2023-05-20 18:13:32.622 +10:00 [DBG] Hosting started
+2023-05-20 18:13:32.760 +10:00 [DBG] Connection id "0HMQP18D3JO6R" received FIN.
+2023-05-20 18:13:32.760 +10:00 [DBG] Connection id "0HMQP18D3JO6Q" received FIN.
+2023-05-20 18:13:32.763 +10:00 [DBG] Connection id "0HMQP18D3JO6R" accepted.
+2023-05-20 18:13:32.763 +10:00 [DBG] Connection id "0HMQP18D3JO6Q" accepted.
+2023-05-20 18:13:32.765 +10:00 [DBG] Connection id "0HMQP18D3JO6R" started.
+2023-05-20 18:13:32.765 +10:00 [DBG] Connection id "0HMQP18D3JO6Q" started.
+2023-05-20 18:13:32.779 +10:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-05-20 18:13:32.779 +10:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-05-20 18:13:32.809 +10:00 [DBG] Connection id "0HMQP18D3JO6R" stopped.
+2023-05-20 18:13:32.809 +10:00 [DBG] Connection id "0HMQP18D3JO6Q" stopped.
+2023-05-20 18:13:32.812 +10:00 [DBG] Connection id "0HMQP18D3JO6R" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-05-20 18:13:32.813 +10:00 [DBG] Connection id "0HMQP18D3JO6Q" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-05-20 18:13:33.302 +10:00 [DBG] Connection id "0HMQP18D3JO6S" accepted.
+2023-05-20 18:13:33.351 +10:00 [DBG] Connection id "0HMQP18D3JO6S" started.
+2023-05-20 18:13:33.421 +10:00 [DBG] Connection 0HMQP18D3JO6S established using the following protocol: "Tls13"
+2023-05-20 18:13:33.512 +10:00 [INF] Request starting HTTP/2 GET https://localhost:7154/swagger - -
+2023-05-20 18:13:33.582 +10:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-05-20 18:13:33.640 +10:00 [DBG] No candidates found for the request path '/swagger'
+2023-05-20 18:13:33.656 +10:00 [DBG] Request did not match any endpoints
+2023-05-20 18:13:33.675 +10:00 [INF] Request finished HTTP/2 GET https://localhost:7154/swagger - - - 404 0 - 172.6131ms
+2023-05-20 18:13:35.406 +10:00 [DBG] Connection id "0HMQP18D3JO6T" accepted.
+2023-05-20 18:13:35.408 +10:00 [DBG] Connection id "0HMQP18D3JO6T" received FIN.
+2023-05-20 18:13:35.409 +10:00 [DBG] Connection id "0HMQP18D3JO6T" started.
+2023-05-20 18:13:35.409 +10:00 [DBG] Connection id "0HMQP18D3JO6U" accepted.
+2023-05-20 18:13:35.412 +10:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-05-20 18:13:35.412 +10:00 [DBG] Connection id "0HMQP18D3JO6U" started.
+2023-05-20 18:13:35.415 +10:00 [DBG] Connection id "0HMQP18D3JO6T" stopped.
+2023-05-20 18:13:35.417 +10:00 [DBG] Connection id "0HMQP18D3JO6T" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-05-20 18:13:35.421 +10:00 [DBG] Connection 0HMQP18D3JO6U established using the following protocol: "Tls13"
+2023-05-20 18:13:35.432 +10:00 [INF] Request starting HTTP/1.1 POST https://localhost:7154/api/authentication/authenticate application/json 61
+2023-05-20 18:13:35.441 +10:00 [DBG] 1 candidate(s) found for the request path '/api/authentication/authenticate'
+2023-05-20 18:13:35.447 +10:00 [DBG] Endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)' with route pattern 'api/authentication/authenticate' is valid for the request path '/api/authentication/authenticate'
+2023-05-20 18:13:35.449 +10:00 [DBG] Request matched endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:13:35.451 +10:00 [INF] Executing endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:13:35.495 +10:00 [INF] Route matched with {action = "Authenticate", controller = "Authentication"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Authenticate(AuthenticationRequestBody) on controller CityAPI.Controllers.AuthenticationController (CityAPI).
+2023-05-20 18:13:35.499 +10:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-05-20 18:13:35.500 +10:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-05-20 18:13:35.502 +10:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-05-20 18:13:35.504 +10:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-05-20 18:13:35.506 +10:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-05-20 18:13:35.508 +10:00 [DBG] Executing controller factory for controller CityAPI.Controllers.AuthenticationController (CityAPI)
+2023-05-20 18:13:35.509 +10:00 [DBG] Executed controller factory for controller CityAPI.Controllers.AuthenticationController (CityAPI)
+2023-05-20 18:13:35.513 +10:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-05-20 18:13:35.519 +10:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' using the name '' in request data ...
+2023-05-20 18:13:35.522 +10:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerInputFormatter' for content type 'application/json'.
+2023-05-20 18:13:35.523 +10:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'.
+2023-05-20 18:13:35.526 +10:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'.
+2023-05-20 18:13:35.534 +10:00 [DBG] Connection id "0HMQP18D3JO6U", Request id "0HMQP18D3JO6U:00000002": started reading request body.
+2023-05-20 18:13:35.535 +10:00 [DBG] Connection id "0HMQP18D3JO6U", Request id "0HMQP18D3JO6U:00000002": done reading request body.
+2023-05-20 18:13:35.658 +10:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:13:35.659 +10:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:13:35.661 +10:00 [DBG] Attempting to validate the bound parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-05-20 18:13:35.675 +10:00 [DBG] Done attempting to validate the bound parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:13:35.694 +10:00 [INF] Executed action CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI) in 181.5742ms
+2023-05-20 18:13:35.696 +10:00 [INF] Executed endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:13:35.697 +10:00 [ERR] Connection id "0HMQP18D3JO6U", Request id "0HMQP18D3JO6U:00000002": An unhandled exception was thrown by the application.
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at CityAPI.Controllers.AuthenticationController.Authenticate(AuthenticationRequestBody authenticationRequestBody) in C:\Users\kashif.akram\Projects\dotnetapi6\CityAPI\Controllers\AuthenticationController.cs:line 54
+   at lambda_method1(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-05-20 18:13:35.737 +10:00 [DBG] Connection id "0HMQP18D3JO6U" completed keep alive response.
+2023-05-20 18:13:35.739 +10:00 [INF] Request finished HTTP/1.1 POST https://localhost:7154/api/authentication/authenticate application/json 61 - 500 0 - 306.7794ms
+2023-05-20 18:15:07.968 +10:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-05-20 18:15:08.048 +10:00 [DBG] Hosting starting
+2023-05-20 18:15:08.338 +10:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 2A57B1E68B58CE4FB973E6C0E9A6B0BB031D7804)
+2023-05-20 18:15:08.403 +10:00 [INF] Now listening on: https://localhost:7154
+2023-05-20 18:15:08.404 +10:00 [INF] Now listening on: http://localhost:5170
+2023-05-20 18:15:08.405 +10:00 [DBG] Loaded hosting startup assembly CityAPI
+2023-05-20 18:15:08.406 +10:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-05-20 18:15:08.407 +10:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-05-20 18:15:08.408 +10:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-20 18:15:08.408 +10:00 [INF] Hosting environment: Development
+2023-05-20 18:15:08.409 +10:00 [INF] Content root path: C:\Users\kashif.akram\Projects\dotnetapi6\CityAPI\
+2023-05-20 18:15:08.409 +10:00 [DBG] Hosting started
+2023-05-20 18:15:18.440 +10:00 [DBG] Connection id "0HMQP19CJEJP0" received FIN.
+2023-05-20 18:15:18.447 +10:00 [DBG] Connection id "0HMQP19CJEJP0" accepted.
+2023-05-20 18:15:18.449 +10:00 [DBG] Connection id "0HMQP19CJEJP0" started.
+2023-05-20 18:15:18.451 +10:00 [DBG] Connection id "0HMQP19CJEJP1" accepted.
+2023-05-20 18:15:18.453 +10:00 [DBG] Connection id "0HMQP19CJEJP1" started.
+2023-05-20 18:15:18.465 +10:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-05-20 18:15:18.495 +10:00 [DBG] Connection id "0HMQP19CJEJP0" stopped.
+2023-05-20 18:15:18.498 +10:00 [DBG] Connection id "0HMQP19CJEJP0" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-05-20 18:15:18.508 +10:00 [DBG] Connection 0HMQP19CJEJP1 established using the following protocol: "Tls13"
+2023-05-20 18:15:18.541 +10:00 [INF] Request starting HTTP/1.1 POST https://localhost:7154/api/authentication/authenticate application/json 61
+2023-05-20 18:15:18.554 +10:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-05-20 18:15:18.584 +10:00 [DBG] 1 candidate(s) found for the request path '/api/authentication/authenticate'
+2023-05-20 18:15:18.589 +10:00 [DBG] Endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)' with route pattern 'api/authentication/authenticate' is valid for the request path '/api/authentication/authenticate'
+2023-05-20 18:15:18.591 +10:00 [DBG] Request matched endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:15:18.611 +10:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2023-05-20 18:15:18.615 +10:00 [INF] Executing endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:15:18.634 +10:00 [INF] Route matched with {action = "Authenticate", controller = "Authentication"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] Authenticate(AuthenticationRequestBody) on controller CityAPI.Controllers.AuthenticationController (CityAPI).
+2023-05-20 18:15:18.638 +10:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-05-20 18:15:18.639 +10:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-05-20 18:15:18.642 +10:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-05-20 18:15:18.643 +10:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-05-20 18:15:18.645 +10:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-05-20 18:15:18.646 +10:00 [DBG] Executing controller factory for controller CityAPI.Controllers.AuthenticationController (CityAPI)
+2023-05-20 18:15:18.648 +10:00 [DBG] Executed controller factory for controller CityAPI.Controllers.AuthenticationController (CityAPI)
+2023-05-20 18:15:18.653 +10:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-05-20 18:15:18.659 +10:00 [DBG] Attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' using the name '' in request data ...
+2023-05-20 18:15:18.661 +10:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerInputFormatter' for content type 'application/json'.
+2023-05-20 18:15:18.663 +10:00 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'.
+2023-05-20 18:15:18.664 +10:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'.
+2023-05-20 18:15:18.670 +10:00 [DBG] Connection id "0HMQP19CJEJP1", Request id "0HMQP19CJEJP1:00000002": started reading request body.
+2023-05-20 18:15:18.671 +10:00 [DBG] Connection id "0HMQP19CJEJP1", Request id "0HMQP19CJEJP1:00000002": done reading request body.
+2023-05-20 18:15:18.804 +10:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:15:18.807 +10:00 [DBG] Done attempting to bind parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:15:18.809 +10:00 [DBG] Attempting to validate the bound parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody' ...
+2023-05-20 18:15:18.820 +10:00 [DBG] Done attempting to validate the bound parameter 'authenticationRequestBody' of type 'CityAPI.Controllers.AuthenticationController+AuthenticationRequestBody'.
+2023-05-20 18:15:18.969 +10:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2023-05-20 18:15:18.986 +10:00 [DBG] No information found on request to perform content negotiation.
+2023-05-20 18:15:18.989 +10:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-05-20 18:15:18.991 +10:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-05-20 18:15:18.994 +10:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2023-05-20 18:15:18.998 +10:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-05-20 18:15:19.008 +10:00 [INF] Executed action CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI) in 357.7022ms
+2023-05-20 18:15:19.009 +10:00 [INF] Executed endpoint 'CityAPI.Controllers.AuthenticationController.Authenticate (CityAPI)'
+2023-05-20 18:15:19.010 +10:00 [DBG] Connection id "0HMQP19CJEJP1" completed keep alive response.
+2023-05-20 18:15:19.015 +10:00 [INF] Request finished HTTP/1.1 POST https://localhost:7154/api/authentication/authenticate application/json 61 - 200 - text/plain;+charset=utf-8 475.2799ms
+2023-05-20 18:17:30.002 +10:00 [DBG] Connection id "0HMQP19CJEJP1" disconnecting.
+2023-05-20 18:17:30.006 +10:00 [DBG] Connection id "0HMQP19CJEJP1" stopped.
+2023-05-20 18:17:30.012 +10:00 [DBG] Connection id "0HMQP19CJEJP1" sending FIN because: "The Socket transport's send loop completed gracefully."
