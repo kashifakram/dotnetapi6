@@ -1,14 +1,15 @@
 ﻿using CityAPI.Models;
 using CityAPI.Services;
 using CityAPI.Stores;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
 
 namespace CityAPI.Controllers;
 
 [ApiController]
 [Route("api/cities/{cityId}/pois")]
+[Authorize]
 public class PoiController : ControllerBase
 {
     private readonly ILogger<PoiController> _logger;
