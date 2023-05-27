@@ -25,7 +25,7 @@ test-results/
 Icon
 
 # log files
-*.txt
+CityAPI/logs
 
 # Thumbnails
 ._*
