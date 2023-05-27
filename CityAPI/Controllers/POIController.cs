@@ -29,6 +29,9 @@ public class PoiController : ControllerBase
     [HttpGet]
     public ActionResult<IEnumerable<PoiDto>> GetPoIs(int cityId)
     {
+        var cityName = User.Claims.FirstOrDefault(uc => uc.Type == "city")?.Value;
+
+
         var city = FindCity(cityId);
 
         _logger.LogInformation($"city {cityId}");

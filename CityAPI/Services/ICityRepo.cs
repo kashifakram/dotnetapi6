@@ -9,6 +9,8 @@ namespace CityAPI.Services
 		Task<City?> GetAsyncCity(int cityId, bool includePois);
 		Task<IEnumerable<Poi>> GetAsyncPois(int cityId);
 		Task<Poi?> GetAsyncPoi(int cityId, int poiId);
+        Task<bool> CityNameMatchesCityId(string? cityName, int cityId);
+
     }
 }
 
