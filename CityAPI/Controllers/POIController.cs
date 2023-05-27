@@ -9,28 +9,44 @@ namespace CityAPI.Controllers;
 
 [ApiController]
 [Route("api/cities/{cityId}/pois")]
-[Authorize]
+[Authorize(Policy = "MustBeFromFSD")]
 public class PoiController : ControllerBase
 {
     private readonly ILogger<PoiController> _logger;
     private readonly IMailService _localMailService;
+    private readonly ICityRepo _cityRepo;
     private readonly CityDataStore _cityDataStore;
-
     private readonly List<CityDto> cities;
 
-    public PoiController(ILogger<PoiController> logger, IMailService localMailService, CityDataStore cityDataStore)
+    public PoiController(ILogger<PoiController> logger, IMailService localMailService, ICityRepo cityRepo, CityDataStore cityDataStore)
     {
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         _localMailService = localMailService ?? throw new ArgumentNullException(nameof(localMailService));
+        _cityRepo = cityRepo ?? throw new ArgumentNullException(nameof(cityRepo));
         _cityDataStore = cityDataStore ?? throw new ArgumentNullException(nameof(cityDataStore));
         cities = _cityDataStore.Cities;
     }
 
-    [HttpGet]
-    public ActionResult<IEnumerable<PoiDto>> GetPoIs(int cityId)
+    // Sync Version
+    [HttpGet("poissync")]
+    public ActionResult<IEnumerable<PoiDto>> GetPoIsSunc(int cityId)
     {
         var cityName = User.Claims.FirstOrDefault(uc => uc.Type == "city")?.Value;
 
+        var city = FindCity(cityId);
+
+        _logger.LogInformation($"city {cityId}");
+
+        return city == null ? NotFound() : Ok(city.POI);
+    }
+
+    // Async Version
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<PoiDto>>> GetPoIs(int cityId)
+    {
+        var cityName = User.Claims.FirstOrDefault(uc => uc.Type == "city")?.Value;
+
+        if (!await _cityRepo.CityNameMatchesCityId(cityName, cityId)) return Forbid();
 
         var city = FindCity(cityId);
 

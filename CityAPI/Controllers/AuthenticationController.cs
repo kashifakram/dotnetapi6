@@ -1,7 +1,6 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 
@@ -13,6 +12,7 @@ namespace CityAPI.Controllers
     {
         private readonly IConfiguration _configuration;
 
+        // if we are not going to use a class outsite of another class then it should be defined within parent class
         public class AuthenticationRequestBody 
         {
             public string? UserName { get; set; }
@@ -77,7 +77,7 @@ namespace CityAPI.Controllers
         {
             if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password)) return null;
 
-            return new CityInfoUser(1, "kashifakram", "Kashif", "Akram", "Sydney");
+            return new CityInfoUser(1, "kashifakram", "Kashif", "Akram", "Faisalabad");
         }
     }
 }

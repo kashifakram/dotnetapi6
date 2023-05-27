@@ -27,6 +27,10 @@ Icon
 # log files
 CityAPI/logs
 
+# db temp files
+CityInfo.db-wal
+CityInfo.db-shm
+
 # Thumbnails
 ._*
 
