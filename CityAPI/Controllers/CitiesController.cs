@@ -1,9 +1,10 @@
 ﻿using AutoMapper;
+using CityAPI.Helpers;
 using CityAPI.Models;
 using CityAPI.ResourceParameters;
 using CityAPI.Services;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace CityAPI.Controllers;
 
@@ -26,8 +27,29 @@ public class CitiesController : ControllerBase
     public async Task<ActionResult<IEnumerable<CityWithoutPioDto>>> GetCities(
         [FromQuery] CitiesResourceParameters citiesResourceParameters)
     {
-        var cities = await _cityRepo.GetAsyncCities();
+        var cities = await _cityRepo.GetAsyncCities(citiesResourceParameters);
+
         if (!cities.Any()) return NotFound();
+
+        var previousLink = cities.HasPrevious
+            ? CreateCitiesResourceUri(citiesResourceParameters, ResourceUriType.PreviousPage)
+            : null;
+
+        var nextLink = cities.HasNext
+            ? CreateCitiesResourceUri(citiesResourceParameters, ResourceUriType.NextPage)
+            : null;
+
+        var paginationMetadata = new
+        {
+            totalCount = cities.Count,
+            pageSize = cities.PageSize,
+            currentPage = cities.CurrentPage,
+            totalPages = cities.TotalPages,
+            previousLink,
+            nextLink,
+        };
+
+        Response.Headers.Add("X-Pagination", JsonSerializer.Serialize(paginationMetadata));
 
         var results = new List<CityWithoutPioDto>();
         foreach (var city in cities)
@@ -82,6 +104,38 @@ public class CitiesController : ControllerBase
             };
 
             return Ok(result);
+        }
+    }
+
+    [NonAction]
+    private string? CreateCitiesResourceUri(CitiesResourceParameters citiesResourceParameters,
+        ResourceUriType resourceUriType)
+    {
+        switch (resourceUriType)
+        {
+            case ResourceUriType.NextPage:
+                return Url.Link(nameof(GetCities), new
+                {
+                    pageNumber = citiesResourceParameters.PageNumber + 1,
+                    pageSize = citiesResourceParameters.PageSize,
+                    searchQuery = citiesResourceParameters.SearchQuery
+                });
+                break;
+            case ResourceUriType.PreviousPage:
+                return Url.Link(nameof(GetCities), new
+                {
+                    pageNumber = citiesResourceParameters.PageNumber - 1,
+                    pageSize = citiesResourceParameters.PageSize,
+                    searchQuery = citiesResourceParameters.SearchQuery
+                });
+                break;
+            default:
+                return Url.Link(nameof(GetCities), new
+                {
+                    pageNumber = citiesResourceParameters.PageNumber,
+                    pageSize = citiesResourceParameters.PageSize,
+                    searchQuery = citiesResourceParameters.SearchQuery
+                });
         }
     }
 }

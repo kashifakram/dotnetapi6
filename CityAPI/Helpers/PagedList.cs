@@ -6,8 +6,10 @@ namespace CityAPI.Helpers
     {
         public int TotalCount { get; }
         public int PageSize { get; }
-        public int CurrentPage { get; private set; }
+        public int CurrentPage { get; }
         public int TotalPages { get; set; }
+        public bool HasPrevious => CurrentPage > 1;
+        public bool HasNext => CurrentPage < TotalPages;
 
 
         public PagedList(IEnumerable<T> items, int totalCount, int pageNumber, int pageSize)
