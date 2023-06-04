@@ -31,6 +31,9 @@ CityAPI/logs
 CityInfo.db-wal
 CityInfo.db-shm
 
+# Minimal API Project
+Minimal
+
 # Thumbnails
 ._*
 
