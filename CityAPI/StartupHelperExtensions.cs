@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
+using ILogger = Microsoft.Extensions.Logging.ILogger;
 
 namespace CityAPI
 {
@@ -15,12 +17,19 @@ namespace CityAPI
         // Add services to the container
         public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
         {
+            // To clear all existing providers
+            builder.Logging.ClearProviders();
+
+            // Add different loggers
+            builder.Logging.AddConsole();
+            builder.Host.UseSerilog();
+
             builder.Services.AddControllers(ops =>
                 {
                     ops.ReturnHttpNotAcceptable = true;
                     ops.CacheProfiles.Add("30MinsCacheProfile", new CacheProfile { Duration = 1800 });
                 })
-                .AddXmlDataContractSerializerFormatters()
+                //.AddXmlDataContractSerializerFormatters()
                 .AddNewtonsoftJson()
                 .ConfigureApiBehaviorOptions(ops =>
                 {
@@ -143,6 +152,25 @@ namespace CityAPI
             app.MapControllers();
 
             return app;
+        }
+
+        public static async Task ResetDatabaseAsync(this WebApplication app)
+        {
+            using var scope = app.Services.CreateScope();
+            try
+            {
+                var context = scope.ServiceProvider.GetService<CityContext>();
+                if (context != null)
+                {
+                    await context.Database.EnsureDeletedAsync();
+                    await context.Database.MigrateAsync();
+                }
+            }
+            catch (Exception e)
+            {
+                var logger = scope.ServiceProvider.GetRequiredService<ILogger>();
+                logger.LogError(e, "An error occurred while migrating the database.");
+            }
         }
     }
 }
