@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CityAPI.Models;
+using CityAPI.ResourceParameters;
 using CityAPI.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -8,7 +9,8 @@ namespace CityAPI.Controllers;
 
 [ApiController]
 [Route("api/cities")]
-[Authorize]
+[ResponseCache(Duration = 60)]
+//[Authorize]
 public class CitiesController : ControllerBase
 {
     private readonly ICityRepo _cityRepo;
@@ -21,7 +23,8 @@ public class CitiesController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<CityWithoutPioDto>>> GetCities()
+    public async Task<ActionResult<IEnumerable<CityWithoutPioDto>>> GetCities(
+        [FromQuery] CitiesResourceParameters citiesResourceParameters)
     {
         var cities = await _cityRepo.GetAsyncCities();
         if (!cities.Any()) return NotFound();

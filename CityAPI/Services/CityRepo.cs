@@ -1,6 +1,7 @@
-﻿using System;
-using CityAPI.DbContexts;
+﻿using CityAPI.DbContexts;
 using CityAPI.Entities;
+using CityAPI.Helpers;
+using CityAPI.ResourceParameters;
 using Microsoft.EntityFrameworkCore;
 
 namespace CityAPI.Services
@@ -14,6 +15,23 @@ namespace CityAPI.Services
 		}
 
         public async Task<IEnumerable<City>> GetAsyncCities() => await _cityContext.Cities.OrderBy(c => c.Name).ToListAsync();
+
+        public async Task<PagedList<City>> GetAsyncCities(CitiesResourceParameters citiesResourceParameters)
+        {
+            if (citiesResourceParameters == null) throw new ArgumentNullException(nameof(citiesResourceParameters));
+
+            var citiesCollection = _cityContext.Cities as IQueryable<City>;
+
+            if (!string.IsNullOrEmpty(citiesResourceParameters.SearchQuery))
+            {
+                var query = citiesResourceParameters.SearchQuery.Trim();
+                citiesCollection = citiesCollection.Where(c =>
+                    c.Description != null && (c.Name.Contains(query) || c.Description.Contains(query)));
+            }
+
+            return await PagedList<City>.CreateAsync(citiesCollection, citiesResourceParameters.PageNumber,
+                citiesResourceParameters.PageSize);
+        }
 
         public async Task<City?> GetAsyncCity(int cityId, bool includePois) => !includePois ? await _cityContext.Cities.FirstOrDefaultAsync(c => c.Id == cityId) : await _cityContext.Cities.Include(c => c.POI).FirstOrDefaultAsync();
 

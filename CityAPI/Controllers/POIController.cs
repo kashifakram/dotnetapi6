@@ -1,6 +1,7 @@
 ﻿using CityAPI.Models;
 using CityAPI.Services;
 using CityAPI.Stores;
+using Marvin.Cache.Headers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +11,8 @@ namespace CityAPI.Controllers;
 [ApiController]
 [Route("api/cities/{cityId}/pois")]
 [Authorize(Policy = "MustBeFromFSD")]
+[HttpCacheExpiration(MaxAge = 3600)]
+[HttpCacheValidation(MustRevalidate = false, VaryByAll = true)]
 public class PoiController : ControllerBase
 {
     private readonly ILogger<PoiController> _logger;
