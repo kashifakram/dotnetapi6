@@ -111,31 +111,29 @@ public class CitiesController : ControllerBase
     private string? CreateCitiesResourceUri(CitiesResourceParameters citiesResourceParameters,
         ResourceUriType resourceUriType)
     {
-        switch (resourceUriType)
+        return resourceUriType switch
         {
-            case ResourceUriType.NextPage:
-                return Url.Link(nameof(GetCities), new
+            ResourceUriType.NextPage => Url.Link(nameof(GetCities),
+                new
                 {
                     pageNumber = citiesResourceParameters.PageNumber + 1,
                     pageSize = citiesResourceParameters.PageSize,
                     searchQuery = citiesResourceParameters.SearchQuery
-                });
-                break;
-            case ResourceUriType.PreviousPage:
-                return Url.Link(nameof(GetCities), new
+                }),
+            ResourceUriType.PreviousPage => Url.Link(nameof(GetCities),
+                new
                 {
                     pageNumber = citiesResourceParameters.PageNumber - 1,
                     pageSize = citiesResourceParameters.PageSize,
                     searchQuery = citiesResourceParameters.SearchQuery
-                });
-                break;
-            default:
-                return Url.Link(nameof(GetCities), new
+                }),
+            _ => Url.Link(nameof(GetCities),
+                new
                 {
                     pageNumber = citiesResourceParameters.PageNumber,
                     pageSize = citiesResourceParameters.PageSize,
                     searchQuery = citiesResourceParameters.SearchQuery
-                });
-        }
+                })
+        };
     }
 }

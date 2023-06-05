@@ -1,15 +1,13 @@
 ﻿using System;
 using AutoMapper;
 
-namespace CityAPI.AutoMapperProfiles
+namespace CityAPI.AutoMapperProfiles;
+
+public class CityProfile : Profile
 {
-	public class CityProfile : Profile
-	{
-		public CityProfile()
-		{
-			CreateMap<Entities.City, Models.CityWithoutPioDto>();
-			CreateMap<Entities.Poi, Models.PoiDto>();
-        }
+    public CityProfile()
+    {
+        CreateMap<Entities.City, Models.CityWithoutPioDto>();
+        CreateMap<Entities.Poi, Models.PoiDto>();
     }
 }
-
