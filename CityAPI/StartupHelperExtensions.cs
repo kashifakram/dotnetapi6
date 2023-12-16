@@ -139,7 +139,6 @@ internal static class StartupHelperExtensions
         app.UseResponseCaching();
         app.UseHttpCacheHeaders();
 
-        app.UseHttpCacheHeaders();
         app.UseRouting();
 
         // this will be used by secured API / Service to authenticate user and verify user token configured in services before granting access to resource

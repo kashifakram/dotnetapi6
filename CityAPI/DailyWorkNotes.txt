@@ -6,7 +6,7 @@ Application level security
 Application level security - Tokens are consent bw client and secured services
 JWT token consists of 3 parts
 1. HEADER - Essential token information like the key algorithm used for signing
-2. PAYLOAD - JSON that contains generic token info, like when the was created and some info about the user
+2. PAYLOAD - JSON that contains generic token info, like when the token was created and some info about the user
 3. SIGNATURE (using some secret key) - Hash of payload, used to ensure the data wasn't tampered with
  
 Creating User Steps
@@ -17,5 +17,5 @@ Creating User Steps
 Adding token steps
 1. Create service to generate token to access secured services. This service will authenticate user first using username/password combination before reutrning token. If not using the web client use POST method to login endpoint to avoid sending username password on the wire
 2. Add user claims to token 
-3. On secured services we need to make sure than valid token is required before granting access to user, this can be done using same key we used to sign the original token and then getting the user principals, toke expiry to check if user is granted the permissions to access the resources.
+3. On secured services we need to make sure that valid token is required before granting access to user, this can be done using same key we used to sign the original token and then getting the user principals, token expiry to check if user is granted the permissions to access the resources.
 4. Pass the token from client to service as Bearer token on each request (Authorization: Bearer generated_token)

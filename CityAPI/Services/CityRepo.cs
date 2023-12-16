@@ -26,7 +26,7 @@ public class CityRepo : ICityRepo
         {
             var query = citiesResourceParameters.SearchQuery.Trim();
             citiesCollection = citiesCollection.Where(c =>
-                c.Description != null && (c.Name.Contains(query) || c.Description.Contains(query)));
+                c.Name != null && (c.Name.Contains(query) || c.Description != null && c.Description.Contains(query)));
         }
 
         return await PagedList<City>.CreateAsync(citiesCollection, citiesResourceParameters.PageNumber,

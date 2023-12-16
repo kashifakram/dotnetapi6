@@ -34,6 +34,7 @@
     <None Remove="Services\" />
     <None Remove="DbContexts\" />
     <None Remove="AutoMapperProfiles\" />
+    <None Remove="Utils\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Week02- Tute.pdf">
@@ -44,6 +45,7 @@
     <Folder Include="Services\" />
     <Folder Include="DbContexts\" />
     <Folder Include="AutoMapperProfiles\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1development_1json__JsonSchema="https://codemagic.io/codemagic-schema.json" /></VisualStudio></ProjectExtensions>
 </Project>
