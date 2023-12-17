@@ -9,7 +9,7 @@ public class Fibonachi
         _fibNumber = fibNumber;
     }
 
-    public int GetByForLoop()
+    public static int GetByForLoop()
     {
         int pre1 = 1;
         int pre2 = 1;
@@ -26,7 +26,7 @@ public class Fibonachi
         return result;
     }
 
-    public int GetByListWhileLoop()
+    public static int GetByListWhileLoop()
     {
         var fib = new List<int> { 1, 1 };
 
@@ -42,4 +42,3 @@ public class Fibonachi
         return fib[^1];
     }
 }
-
